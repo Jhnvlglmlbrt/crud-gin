@@ -3,6 +3,7 @@ package repository
 import (
 	"errors"
 
+	"github.com/Jhnvlglmlbrt/crud-gin/data/request"
 	"github.com/Jhnvlglmlbrt/crud-gin/model"
 	"gorm.io/gorm"
 )
@@ -69,6 +70,14 @@ func (t *TagsRepositoryImpl) Save(tags model.Tags) error {
 }
 
 // Update implements TagsRepository.
-func (t *TagsRepositoryImpl) Update(tags model.Tags) {
-	panic("unimplemented")
+func (t *TagsRepositoryImpl) Update(tags model.Tags) error {
+	var updateTag = request.UpdateTagsRequest{
+		ID:   tags.ID,
+		Name: tags.Name,
+	}
+
+	if result := t.DB.Model(&tags).Updates(updateTag); result.Error != nil {
+		return result.Error
+	}
+	return nil
 }
