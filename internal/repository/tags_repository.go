@@ -1,6 +1,6 @@
 package repository
 
-import "github.com/Jhnvlglmlbrt/crud-gin/model"
+import "github.com/Jhnvlglmlbrt/crud-gin/internal/model"
 
 type TagsRepository interface {
 	Save(tags model.Tags) error
