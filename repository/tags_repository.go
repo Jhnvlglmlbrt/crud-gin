@@ -3,9 +3,9 @@ package repository
 import "github.com/Jhnvlglmlbrt/crud-gin/model"
 
 type TagsRepository interface {
-	Save(tags model.Tags)
-	Update(tags model.Tags)
-	Delete(tagsID int)
+	Save(tags model.Tags) error
+	Update(tags model.Tags) error
+	Delete(tagsID int) error
 	FindByID(tagsID int) (tags model.Tags, err error)
-	FindAll() []model.Tags
+	FindAll() ([]model.Tags, error)
 }
