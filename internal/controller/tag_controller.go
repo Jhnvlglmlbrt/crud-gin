@@ -5,7 +5,7 @@ import (
 	"strconv"
 
 	"github.com/Jhnvlglmlbrt/crud-gin/data/request"
-	"github.com/Jhnvlglmlbrt/crud-gin/service"
+	"github.com/Jhnvlglmlbrt/crud-gin/internal/service"
 	"github.com/Jhnvlglmlbrt/crud-gin/utils"
 	"github.com/gin-gonic/gin"
 )

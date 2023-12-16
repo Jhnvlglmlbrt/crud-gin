@@ -5,8 +5,8 @@ import (
 
 	"github.com/Jhnvlglmlbrt/crud-gin/data/request"
 	"github.com/Jhnvlglmlbrt/crud-gin/data/response"
-	"github.com/Jhnvlglmlbrt/crud-gin/model"
-	"github.com/Jhnvlglmlbrt/crud-gin/repository"
+	"github.com/Jhnvlglmlbrt/crud-gin/internal/model"
+	"github.com/Jhnvlglmlbrt/crud-gin/internal/repository"
 	"github.com/go-playground/validator/v10"
 )
 

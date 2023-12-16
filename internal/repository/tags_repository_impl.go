@@ -4,7 +4,7 @@ import (
 	"errors"
 
 	"github.com/Jhnvlglmlbrt/crud-gin/data/request"
-	"github.com/Jhnvlglmlbrt/crud-gin/model"
+	"github.com/Jhnvlglmlbrt/crud-gin/internal/model"
 	"gorm.io/gorm"
 )
 
