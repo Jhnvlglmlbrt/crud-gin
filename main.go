@@ -2,27 +2,18 @@ package main
 
 import (
 	"log"
-	"net/http"
 
-	"github.com/gin-gonic/gin"
+	"github.com/Jhnvlglmlbrt/crud-gin/config"
+	"github.com/Jhnvlglmlbrt/crud-gin/internal/app"
 )
 
 func main() {
 
-	log.Print("Server starting...")
-	r := gin.Default()
+	cfg, err := config.NewConfig()
 
-	r.GET("", func(c *gin.Context) {
-		c.JSON(http.StatusOK, "welcome home")
-	})
-
-	srv := &http.Server{
-		Handler: r,
-		Addr:    ":8080",
-	}
-
-	err := srv.ListenAndServe()
 	if err != nil {
-		log.Fatal(err)
+		log.Fatalf("Error at starting: %v", err)
 	}
+
+	app.Run(cfg)
 }
