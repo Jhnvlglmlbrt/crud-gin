@@ -33,7 +33,7 @@ func (controller *TagsController) Create(ctx *gin.Context) error {
 }
 
 func (controller *TagsController) Update(ctx *gin.Context) error {
-	tagID, err := strconv.Atoi(ctx.Param("tagsID"))
+	tagID, err := strconv.Atoi(ctx.Param("tagID"))
 	if err != nil {
 		return err
 	}
@@ -52,7 +52,7 @@ func (controller *TagsController) Update(ctx *gin.Context) error {
 
 // Delete controller
 func (controller *TagsController) Delete(ctx *gin.Context) error {
-	tagID, err := strconv.Atoi(ctx.Param("tagsID"))
+	tagID, err := strconv.Atoi(ctx.Param("tagID"))
 	if err != nil {
 		return err
 	}
@@ -65,7 +65,7 @@ func (controller *TagsController) Delete(ctx *gin.Context) error {
 
 // FindByID controller
 func (controller *TagsController) FindByID(ctx *gin.Context) error {
-	tagID, err := strconv.Atoi(ctx.Param("tagsID"))
+	tagID, err := strconv.Atoi(ctx.Param("tagID"))
 	if err != nil {
 		return err
 	}
