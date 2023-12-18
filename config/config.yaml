@@ -1,0 +1,10 @@
+postgres:
+  host: 'localhost'
+  port: '5432'
+  user: 'postgres'
+  password: 'RachelRoth'
+  name: 'test'
+
+http:
+  host: 'localhost'
+  port: '8080'
